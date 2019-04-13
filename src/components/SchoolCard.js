@@ -32,7 +32,7 @@ export default class SchoolCard extends React.Component {
       starClick = (e) => {
         const starNo = e.target.getAttribute('no');
         
-        this.setState({vote: starNo})
+        this.setState({vote: starNo});
       }
       
       _renderStars = () => {
@@ -50,8 +50,7 @@ export default class SchoolCard extends React.Component {
                         <h4 id="school_name"> Greendale Community Collage </h4>
                         <h5 id="city_name">Greendale</h5>
                     </div>
-                    <div onClick={this.favoriteClickHandler} style={styles.favoriteStyle} id="add_favorite_div">
-                        <i className={this.state.favorite ? "icon-heart": "icon-heart-empty"}></i>
+                    <div onClick={this.favoriteClickHandler} style={styles.favoriteStyle} id="add_favorite_div" className={this.state.favorite ? "heart heart-blast": "heart"}>
                     </div>
                     <img style={styles.logoStyle} id="logo-img" src={school_logo} alt="school logo" />
                 </div>
@@ -76,9 +75,13 @@ export default class SchoolCard extends React.Component {
     }
 }
 
+const logoWidth = 70;
+
 const styles = {
     outerContainer:{
       width: 400,
+      borderTopLeftRadius: 10,
+        borderTopRightRadius: 10
     },
     imageContainer : {
         backgroundColor: 'rgba(0,0,0,0.5)',
@@ -94,10 +97,10 @@ const styles = {
     },
     logoStyle : {
         position: "absolute",
-        width: 50,
-        height: 50,
-        right: 10,
-        bottom: -25,
+        width: logoWidth,
+        height: logoWidth,
+        right: 15,
+        bottom: -(logoWidth/2),
         borderRadius: '50%'
     },
     imageTextContainer: {
@@ -107,11 +110,14 @@ const styles = {
     },
     favoriteStyle: {
         position: "absolute",
-        padding: "10px 13px",
-        backgroundColor: 'rgba(0,0,0,0.5)',
-        right: 10,
-        top: 10,
-        borderRadius: '50%'
+        //padding: "10px 13px",
+        //backgroundColor: 'rgba(0,0,0,0.5)',
+        right: -60,
+        top: 35,
+        width : 100,
+        height: 100,
+        cursor: 'pointer'
+        // borderRadius: '50%'
     },
     textContainer: {
         backgroundColor: "white",

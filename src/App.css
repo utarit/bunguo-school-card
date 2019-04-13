@@ -1,5 +1,5 @@
 .App-header {
-  background-color: #282c34;
+  background-color: 'black';
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,4 +12,61 @@
 
 .star {
   margin-right: 2px
+}
+
+#outer-container {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#outer-container:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* Taken by Twitter like button */
+.heart {
+  transform: translate(-50%, -50%);
+  background: url(./assets/heart.png) no-repeat;    
+}
+.heart-blast {
+  background-position: -2800px 0;
+  transition: background 1s steps(28);
+}
+
+
+/* Taken from (edit here) */
+
+.hidden-star{
+  display: none;
+}
+
+.star {
+  display: inline-block;
+  margin: 5px;
+  font-size: 30px;
+  color: whitesmoke;
+  position: relative;
+}
+
+.star-colour {
+  color: #ffd700;
+}
+
+.selected:before {
+  font-family: fontAwesome;
+  display: inline-block;
+  content: "\f005";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+.selected.pulse:before {
+  -webkit-transform: scale(3);
+  opacity: 0;
+}
+.selected.is-animated:before {
+  transition: 1s ease-out;
 }
