@@ -1,1 +1,1 @@
-![Component](https://i.hizliresim.com/al63lO.png)
+![Component](https://i.ibb.co/7jsvttZ/Screenshot-61.png)
