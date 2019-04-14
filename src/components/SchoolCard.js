@@ -1,5 +1,4 @@
 import React from 'react';
-import school_image from '../assets/class.jpg';
 
 import StarBox from './StarBox';
 
@@ -56,7 +55,7 @@ export default class SchoolCard extends React.Component {
 
         return(
             <div id="outer-container" style={styles.outerContainer}>
-                <div id="image-container" style={styles.imageContainer}>
+                <div id="image-container" style={{...styles.imageContainer, backgroundImage: `url(${this.props.coverPicture})`}}>
                     <div style={styles.imageTextContainer} id="image_text_div">
                         <h4 style={styles.imageText} id="school_name">{this.props.schoolName}</h4>
                         <br></br>
@@ -97,7 +96,6 @@ const styles = {
     },
     imageContainer : {
         backgroundColor: 'rgba(0,0,0,0.5)',
-        backgroundImage: `url(${school_image})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SchoolCard from './components/SchoolCard';
 import './App.css';
 import school_logo from './assets/logo.png';
+import school_image from './assets/class.jpg';
 
 
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <SchoolCard
-            coverPicture={null}
+            coverPicture={school_image}
             logoPicture={school_logo}
             city={"Greendale"}
             schoolName={"Greendale Community Collage"}
