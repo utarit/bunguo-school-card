@@ -23,7 +23,8 @@
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-/* Taken by Twitter like button */
+
+/* Strongly inspired-ish from Twitter like button */
 .heart {
   transform: translate(-50%, -50%);
   background: url(./assets/heart.png) no-repeat;    
@@ -34,39 +35,18 @@
 }
 
 
-/* Taken from (edit here) */
+/* El emegi goz nuru */
 
-.hidden-star{
-  display: none;
+
+.box {
+  transition: all 0.0ms;
+  visibility: hidden;
 }
 
-.star {
-  display: inline-block;
-  margin: 5px;
-  font-size: 30px;
-  color: whitesmoke;
-  position: relative;
-}
-
-.star-colour {
-  color: #ffd700;
-}
-
-.selected:before {
-  font-family: fontAwesome;
-  display: inline-block;
-  content: "\f005";
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: scale(1);
-  opacity: 1;
-  z-index: 1;
-}
-.selected.pulse:before {
-  -webkit-transform: scale(3);
+.box-vis {
+  visibility: visible;
   opacity: 0;
+  transform: scale(3);
+  transition: all 400ms ease-out;
 }
-.selected.is-animated:before {
-  transition: 1s ease-out;
-}
+
